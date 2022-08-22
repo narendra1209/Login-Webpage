@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Login view</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+
+
+<script>
+	 function verifyPassLength()
+    {
+        var password = document.getElementById("password1").value;
+        //check empty password field
+        if(password == "")
+        {
+            document.getElementById("message").innerHTML = "Please enter valid password...!";
+            return false;
+        }
+        
+        //Password minimum length
+        if(password.length < 6) 
+        {
+            document.getElementById("message").innerHTML = "Password should not be less than 6 characters...!";
+            return false;
+        }
+
+        //Password maximum length
+        if(password.length > 12)
+        {
+            document.getElementById("message").innerHTML = "Password should not be greater than 12 characters...!";
+            return false;
+        }
+        else
+        {
+			return true;
+        }
+    }
+
+</script>
+
+</head>
+<body>
+<div class="container-contact100">
+<div class="wrap-contact100">
+	<div class="container">  
+  <form id="contact" action="https://sankeysolutions.com/" method="post" onsubmit ="return verifyPassLength()">
+  
+	<h4>Welcome Back</h4>
+	<h3>Login to your account</h3>
+   
+    <fieldset>
+		<label>Email</label>
+      <input placeholder="Email" type="email" tabindex="1" required autofocus>
+    </fieldset>
+	<label>Password</label>
+    <fieldset>
+		
+		<input type = "password" id = "password1" placeholder="Password" tabindex="2" required>
+		<span id = "message" style="color:red"> 
+    </fieldset><br>
+	<h5>
+    <input type="radio" value="remember-me" id="remember_me"> Remember me  <a href="www.google.com">  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;  Forget your password?</a></h5>
+ <br>
+<fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Login now</button>
+    </fieldset>
+	<fieldset>
+		<button name="button" type="button" id="contact-submit" data-submit="...Sending"><image src="5847f9cbcef1014c0b5e48c8 (1).png"></image> &nbsp;Or sign-in with google</button>
+	  </fieldset>
+<br><br><br><br>
+    <p class="copyright">Don't Have an Account? <a href="" target="_blank" title="Colorlib">Join free today</a></p>
+  </form>
+</div>
+<div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
