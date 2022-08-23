@@ -8,8 +8,6 @@
 
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
-
-
 <script>
 	 function verifyPassLength()
     {
@@ -35,8 +33,17 @@
             return false;
         }
         else
+        { if(password== "MINDSET" || password=="mindset")
         {
-			return true;
+            return true;
+
+        }
+        else{
+         document.getElementById("message").innerHTML = "Invalid Username or Password";
+          return false;
+        }
+
+			
         }
     }
 
@@ -81,7 +88,5 @@
 </div>
 </div>
 </div>
-<script src="vendor/bootstrap/js/popper.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
